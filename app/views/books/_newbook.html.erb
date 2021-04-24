@@ -1,0 +1,20 @@
+<h2>New book</h2>
+
+<%= form_with model: book, url:'/books', local:true do |f| %>
+
+  <tbody>
+  <tr>
+    <th><%= f.label :title, class:'control-label' %></th>
+    <th><%= f.text_field :title, class:'col-md-12' %></th>
+  </tr>
+  
+  <tr>
+    <th><%= f.label :body, 'Opinion', class:'control-label' %></th>
+    <th><%= f.text_area :body, class:'col-md-12' %></th>
+  </tr>
+  
+  <div>
+    <%= f.submit 'Create Book',class: "col-md- btn btn-primary" %>
+  </div>
+  </tbody>
+<% end %>

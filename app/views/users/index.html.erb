@@ -1,0 +1,16 @@
+ <div class="container"> 
+  <div class="row">
+    <div class="col-md-3">
+    <%= render 'users/user', user: @user %>
+    <%= render 'books/newbook', book: Book.new %>
+    </div>
+  
+  
+
+    <div class="col-md-8 offset-md-1">
+      <h2>Users</h2>
+      <%= render 'users/index', users: @users %>
+    </div>
+  </div>
+  </div>
+  

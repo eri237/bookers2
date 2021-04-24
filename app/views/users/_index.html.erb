@@ -1,0 +1,16 @@
+<table class="table table-striped table-inverse">
+  
+  <thead>
+    <tr><th>image</th><th>name</th><th></th></tr>
+  </thead>
+  
+  <tbody>
+    <% users.each do |user| %>
+    <tr>
+      <td><%= attachment_image_tag user, :profile_image, :fill, 20, 20, fallback: 'no_image.jpg', size:'20x20',format: 'no_image.jpg' %></td>
+      <td><%= user.name %></td>
+      <td><%= link_to 'Show', user_path(user) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

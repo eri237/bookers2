@@ -1,0 +1,19 @@
+<div class="container"> 
+ <%= render 'layouts/errors_messages', errors: @book %>
+<div class="row">
+  <div class="col-md-3">
+    <%= render 'users/user', user: current_user %>
+  
+  
+  <%= render 'books/newbook', book: @book %>
+  
+  </div>
+  
+ 
+  <div class="col-md-8 offset-md-1">
+    <h2>Books</h2>
+    <%= render 'books/index', books: @books %>
+  </div>
+  
+</div>
+</div>
